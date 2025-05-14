@@ -1,0 +1,235 @@
+/******************************** METHODBAR ******************************************/
+.structure-method-bar-wrapper {
+    height: auto;
+    background-color: var(--light-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: clamp(0.4rem, 1.4vw, 0.9rem) 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.method-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.method-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    box-sizing: border-box;
+    background-color: var(--light-blue);
+    border-radius: 7px;
+    padding: clamp(1px, 0.5vw, 3px);
+    margin: clamp(0.5px, 0.2vw, 1px) 0;
+}
+
+.selected-method {
+    border: 2px solid var(--darker-blue);
+    background-color: var(--lighter-blue);
+    box-shadow: var(--box-shadow-dark);
+    transform: translateY(-2px);
+}
+
+/************************** BASIC METHOD BUTTON *******************************/
+.method-button {
+    width: 100%;
+    max-width: 180px;
+    height: clamp(35px, 4vw, 45px);
+    background-color: var(--primary-color);
+    border: 1px solid var(--dark-blue);
+    border-radius: 7px;
+    text-align: center;
+    font-size: clamp(11px, 1.4vw, 15px);
+    color: var(--white-color);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.method-button:hover {
+    background-color: var(--darker-blue);
+    border: none;
+    transform: scale(1.02);
+}
+
+.method-button:active {
+    background-color: var(--primary-color);
+    transform: scale(0.98);
+}
+
+/************************* INPUT ****************************/
+.input-row {
+    display: flex;
+    gap: clamp(3px, 0.9vw, 7px);
+    align-items: center;
+    width: 95%;
+    justify-content: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: clamp(5px, 0.9vw, 9px);
+    width: 100%;
+}
+
+.method-input {
+    width: 70%;
+    max-width: 90px;
+    height: 20px;
+    padding: 3px;
+    font-size: clamp(10px, 1vw, 13px);
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--white-color);
+    color: var(--text-color);
+    outline: none;
+    margin-bottom: 0.2rem;
+}
+
+.method-input:focus {
+    border: 1px solid var(--dark-blue);
+}
+/****************************** CLEAR BUTTON ******************************/
+.clear-button {
+    width: clamp(45px, 13vw, 100px);
+    height: clamp(28px, 1vw, 30px);
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: clamp(10px, 1vw, 13px);
+    font-weight: 400;
+    color: var(--white-color);
+    transition: background-color 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
+    margin-bottom: 0.2rem;
+}
+
+.clear-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.20);
+}
+
+.clear-button:active {
+    background-color: var(--light-blue);
+}
+
+/***************************** SUBMIT BUTTON ******************************/
+.submit-button {
+    width: 90%;
+    height: clamp(27px, 2.7vw, 33px);
+    background-color: var(--dark-blue);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: clamp(10px, 0.9vw, 13px);
+    font-weight: bold;
+    color: var(--white-color);
+    margin-top: 7px;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.submit-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.20);
+}
+
+.submit-button:active {
+    background-color: var(--light-blue);
+    transform: translateY(0);
+}
+/**************************** INIT METHOD BUTTON *************************/
+.init-text {
+    color: var(--text-color);
+    font-size: clamp(10px, 0.9vw, 13px);
+    font-weight: 500;
+    text-wrap: auto;
+    text-align: center;
+    max-width: 90%;
+}
+
+.button-row {
+    display: flex;
+    gap: clamp(4px, 0.9vw, 6px);
+    margin: 8px 0;
+    width: 100%;
+    justify-content: center;
+}
+
+/******************** SMALL NUMBER BUTTONS ******************/
+.small-button {
+    width: clamp(18px, 22%, 31px);
+    aspect-ratio: 1 / 1;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 6px;
+    font-size: clamp(9px, 1.3vw, 12px);
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--white-color);
+    transition: background-color 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.small-button:hover {
+    border: 1px solid var(--white-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.small-button:active {
+    background-color: var(--light-blue);
+}
+
+/*********************** SUBMIT INIT BUTTON *********************/
+.submit-init-button {
+    width: clamp(54px, 67%, 81px);
+    height: clamp(27px, 1.8vw, 31px);
+    background-color: var(--dark-blue);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: clamp(9px, 0.9vw, 12px);
+    font-weight: bold;
+    color: var(--white-color);
+    margin-bottom: 0.2rem;
+}
+
+.submit-init-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.20);
+}
+
+.submit-init-button:active {
+    background-color: var(--light-blue);
+    transform: translateY(0);
+}
+
+/********************* ERROR MESSAGE *********************/
+.error-message {
+    color: var(--danger-color);
+    font-size: clamp(10px, 0.9vw, 12px);
+    font-weight: 700;
+    margin: 6px 0 3px;
+    max-width: 90%;
+    text-align: center;
+}
+
+
+/******************** ACTIVE LABEL FOR LISTS ******************/
+.active-label {
+    padding-top: 10px;
+    font-size: clamp(11px, 1vw, 14px);
+    color: var(--text-color);
+}

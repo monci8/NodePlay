@@ -1,0 +1,236 @@
+/******************** HEADER *******************************/
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 45px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.9rem;
+    box-shadow: var(--box-shadow-dark);
+    color: var(--white-color);
+}
+
+.header-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-right button {
+    margin-left: 0.45rem;
+}
+
+
+/*********************** LANGUAGE *************************/
+.lang-label {
+    margin-right: 5px;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--white-color);
+}
+
+.lang-buttons {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.lang-button {
+    padding: 4px 10px;
+    font-size: var(--font-size-small);
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 7px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lang-button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.lang-button.active {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+}
+
+@media (max-width: 1000px) {
+    .lang-buttons {
+        flex-wrap: nowrap;
+        gap: 4px;
+    }
+
+    .lang-button {
+        font-size: 10px;
+        padding: 3px 7px;
+    }
+}
+
+@media (max-width: 768px) {
+    .lang-buttons {
+        flex-wrap: nowrap;
+        gap: 2px;
+    }
+
+    .lang-button {
+        font-size: 8px;
+        padding: 2px 4px;
+        border-radius: 5px;
+        margin: 0 2px;
+    }
+
+    .lang-label {
+        display: none;
+    }
+}
+
+/******************** LOGO ***********************/
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    color: var(--white-color) !important;
+    background-color: transparent;
+    font-size: var(--font-size-large);
+    font-weight: 600;
+}
+
+.logo.router-link-active {
+    background-color: transparent !important;
+    color: inherit !important;
+    box-shadow: none !important;
+}
+
+.logo img {
+    height: 22px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+/******************* SIDEBAR HIDDEN MENU *********************/
+.hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    color: var(--white-color);
+}
+
+@media (max-width: 1000px) {
+    .hamburger {
+        display: block;
+    }
+}
+/********************* TUTORIAL BUTTON ************************/
+.tutorial-button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    font-size: var(--font-size-base);
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tutorial-button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+    font-size: 16px;
+    margin-right: 3px;
+}
+
+.tutorial-button a {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+
+/******************** RESPONSIVENESS ************************/
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .lang-buttons {
+        flex-wrap: nowrap;
+        gap: 2px;
+    }
+
+    .lang-button {
+        font-size: 12px;
+        padding: 2px 3px;
+        border-radius: 5px;
+        margin: 0 2px;
+    }
+
+    .lang-label {
+        display: none;
+    }
+
+    .header-right {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .header-right button {
+        margin-left: 0.2rem;
+    }
+
+    .logo {
+        font-size: 13px
+    }
+
+    .logo img {
+        height: 25px;
+    }
+
+    .tutorial-text {
+        display: none;
+    }
+
+    .tutorial-button {
+        padding: 4px 7px;
+    }
+
+    .tutorial-button .icon {
+        font-size: 16px;
+        margin: 0;
+    }
+}

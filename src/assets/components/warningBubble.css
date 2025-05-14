@@ -1,0 +1,14 @@
+/***************************** WARNING BUBBLE *****************************/
+.bubble {
+    background-color: var(--warning-bg-color);
+    color: var(--warning-text-color);
+    border: 1px solid var(--warning-border-color);
+    padding: clamp(3px, 0.45vw, 7px) clamp(7px, 1.35vw, 10px);
+    border-radius: clamp(4px, 0.72vw, 7px);
+    font-size: clamp(11px, 0.9vw, 13px);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.12);
+    white-space: normal;
+    width: clamp(72px, 18vw, 162px) !important;
+    text-align: center;
+    z-index: 9999;
+}

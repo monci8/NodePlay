@@ -1,0 +1,358 @@
+/************************** STRUCTURE **************************************/
+.structure-main-container {
+    display: flex;
+    height: calc(100vh - 50px);
+    /*background-color: var(--light-blue);*/
+    margin-left: 7px;
+}
+
+.structure-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0.2rem 0.2rem;
+    margin: 0.5rem 0;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-light);
+}
+
+.structure-graph {
+    background-color: var(--white-color);
+    height: clamp(60vh, 77vh, 85vh);
+    min-height: 300px;
+    max-height: 100vh;
+    overflow: hidden;
+    transition: height 0.2s ease;
+    border-radius: 6px;
+}
+
+.structure-graph.graph-small {
+    height: clamp(40vh, 57vh, 70vh);
+}
+
+/************************* STRUCTURE METHOD BAR *******************************/
+.structure-method-bar {
+    flex: 0 0 17%;
+    max-width: 180px;
+    min-width: 120px;
+}
+
+
+/************************* STRUCTURE HEADER *******************************/
+.structure-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-blue);
+    padding: clamp(0.36rem, 0.9vw, 0.72rem) clamp(0.45rem, 1.35vw, 0.9rem);
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: var(--box-shadow-light);
+    flex-wrap: nowrap;
+}
+
+.structure-header-left,
+.structure-header-right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: clamp(0.27rem, 0.72vw, 0.45rem);
+}
+
+.structure-header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.structure-header .structure-name {
+    font-style: italic;
+    font-size: clamp(13px, 2vw, 17px);
+    color: var(--text-color);
+    font-weight: bold;
+    margin-bottom: 0.1rem;
+}
+
+.structure-header .status-info {
+    font-size: clamp(11px, 1.5vw, 15px);
+    color: var(--dark-blue);
+    font-weight: bold;
+    margin-top: 0.1rem;
+}
+
+.structure-header .center-button,
+.structure-header .reset-button,
+.structure-header .random-button {
+    padding: clamp(0.18rem, 0.45vw, 0.27rem) clamp(0.27rem, 0.72vw, 0.45rem);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: clamp(9px, 1.08vw, 13px);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.structure-header .reset-button {
+    background-color: var(--accent-color);
+}
+
+.structure-header .icon {
+    font-size: clamp(12px, 1.3vw, 15px);
+    margin-right: 4px;
+}
+
+.structure-header .center-button:hover,
+.structure-header .random-button:hover {
+    background-color: var(--dark-blue);
+    transform: translateY(-1px);
+}
+
+.structure-header .reset-button:hover {
+    background-color: var(--darker-accent-color);
+    transform: translateY(-1px);
+}
+
+.structure-header .center-button:active,
+.structure-header .reset-button:active,
+.structure-header .random-button:active {
+    background-color: var(--secondary-color);
+    transform: translateY(0);
+}
+
+.structure-header .reset-button:active {
+    background-color: var(--lighter-accent-color);
+    transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+    .structure-header .center-button .tutorial-text,
+    .structure-header .reset-button .tutorial-text,
+    .structure-header .random-button .tutorial-text {
+        display: none;
+    }
+
+    .structure-header .center-button,
+    .structure-header .reset-button,
+    .structure-header .random-button {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        margin: 0 5px;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .structure-header .reset-button {
+        background-color: var(--accent-color);
+    }
+
+    .structure-header .icon {
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .structure-header-left,
+    .structure-header-right {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: space-around;
+        width: auto;
+    }
+
+    .structure-header .center-button:hover,
+    .structure-header .random-button:hover {
+        background-color: var(--dark-blue);
+        transform: translateY(-1px);
+    }
+
+    .structure-header .reset-button:hover {
+        background-color: var(--darker-accent-color);
+        transform: translateY(-1px);
+    }
+
+    .structure-header .center-button:active,
+    .structure-header .reset-button:active,
+    .structure-header .random-button:active {
+        background-color: var(--secondary-color);
+        transform: translateY(0);
+    }
+
+    .structure-header .reset-button:active {
+        background-color: var(--lighter-accent-color);
+        transform: translateY(0);
+    }
+
+    .structure-header {
+        padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 2vw, 1.5rem);
+        justify-content: space-between;
+        gap: 8px;
+    }
+}
+
+
+/************************** STRUCTURE FOOTER ***************************/
+.structure-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-blue);
+    padding: clamp(0.36rem, 0.9vw, 0.72rem) clamp(0.45rem, 1.35vw, 0.9rem);
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: var(--box-shadow-dark);
+    margin: 0.18rem 0;
+    flex-wrap: nowrap;
+}
+
+.structure-footer .footer-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3px;
+    width: 100%;
+    margin-right: 0.9rem;
+}
+
+.structure-footer .footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(0.36rem, 0.9vw, 0.9rem);
+    width: 100%;
+}
+
+/*********************** CENTER SWITCH ********************************/
+.el-switch__label,
+.el-switch__label * {
+    font-size: 13px;
+    color: var(--text-color);
+}
+
+.el-switch__label.is-active,
+.el-switch__label.is-active * {
+    color: var(--darker-blue);
+    font-weight: bold !important;
+}
+
+.el-switch {
+    --el-switch-on-color: var(--darker-blue);
+}
+
+.footer-switch-label {
+    font-size: 11px;
+    font-weight: 400;
+    text-align: center;
+    display: none;
+    margin-top: -2px;
+}
+
+@media (max-width: 1200px) {
+    .el-switch__label {
+        display: none;
+    }
+
+    .footer-switch-label {
+        display: block;
+    }
+
+    .footer-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 90%;
+    }
+}
+
+/************************** SPEED SLIDER ****************************/
+.footer-slider {
+    flex: 1;
+    min-width: 90px;
+    max-width: 360px;
+    margin-left: 0.45rem;
+    background-color: var(--lighter-blue);
+    border-radius: 7px;
+    padding: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.el-slider {
+    width: 100%;
+    margin: 0.45rem 0;
+}
+
+.el-slider__runway {
+    height: 7px;
+    background-color: var(--light-blue);
+    border-radius: 5px;
+}
+
+.el-slider__bar {
+    height: 7px;
+    background-color: var(--darker-blue);
+    border-radius: 4px;
+}
+
+.el-slider__button {
+    background-color: var(--white-color);
+    border: 2px solid var(--darker-blue);
+    width: 14px;
+    height: 14px;
+    border-radius: 45%;
+    transition: transform 0.2s ease;
+}
+
+.footer-slider-label {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--darker-blue);
+}
+
+@media (max-width: 1200px) {
+    .footer-slider-label {
+        display: none;
+    }
+}
+
+/************************** SLIDER TOOLTIP ****************************/
+.slider-tooltip {
+    font-size: clamp(11px, 1.08vw, 13px) !important;
+    color: var(--darker-blue) !important;
+    background-color: var(--white-color) !important;
+    border: 1px solid var(--darker-blue) !important;
+    position: relative;
+    z-index: 2;
+}
+
+.slider-tooltip::after {
+    border-top-color: var(--white-color) !important;
+}
+
+.slider-tooltip::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: var(--white-color);
+    border: 1px solid var(--darker-blue);
+    z-index: 1;
+}

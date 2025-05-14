@@ -1,0 +1,110 @@
+/*********************** SIDEBAR ***********************/
+.sidebar-aside {
+    width: 170px;
+    min-width: 170px;
+    background-color: var(--lighter-blue);
+    box-shadow: var(--box-shadow-light);
+    overflow-y: auto;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-right: 1px solid var(--border-color);
+    color: var(--text-color);
+    white-space: wrap;
+}
+
+.sidebar-menu {
+    border: none;
+    background-color: transparent;
+}
+
+.sidebar-submenu-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 4px;
+}
+
+.el-sub-menu__title {
+    background-color: var(--lighter-blue);
+    color: var(--text-color);
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.el-sub-menu__title:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.el-sub-menu.is-active .el-sub-menu__title:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.sidebar-submenu-label {
+    margin-left: -35px;
+    font-size: var(--font-size-medium);
+    color: var(--text-color);
+}
+
+.sidebar-item-group {
+    background-color: var(--lighter-blue);
+    padding: 6px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.el-menu-item {
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 8px 12px !important;
+    font-size: var(--font-size-medium);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    color: var(--text-color);
+    margin: 2px 0;
+    font-weight: 500;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.el-menu-item:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    transform: translateX(3px);
+}
+
+.el-menu-item.is-active,
+.router-link-active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+.el-menu-item.is-active:hover {
+    background-color: var(--dark-blue);
+    color: var(--white-color);
+}
+
+.sidebar-aside h2 {
+    padding: 12px 16px;
+    font-size: 1.1rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    margin: 0;
+    font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+    .sidebar-aside {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        height: calc(100% - 50px);
+        transform: translateX(0);
+        transition: transform 0.3s ease;
+    }
+}
